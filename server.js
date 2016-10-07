@@ -24,6 +24,8 @@ app.use(cors);
 app.get('/api/message', messages.get);
 app.post('/api/message', checkAuthorization, messages.post);
 app.post('/auth/register', auth.register);
+app.post('/auth/login', auth.login);
+
 
 // Connection
 mongoose.connect("mongodb://localhost:27017/test", function(err, db) {
