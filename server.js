@@ -35,6 +35,10 @@ function GetMessages(req, res)
     });
 }
 
+app.post('/auth/register', function(req, res) {
+    console.log(req.body);
+});
+
 mongoose.connect("mongodb://localhost:27017/test", function(err, db) {
     if(!err) {
         console.log("Connected to Mongo.");
